@@ -19,12 +19,12 @@ class NavWrapper extends Component {
       render() {
         return (
           <div>
-            {this.state.nav.map(name => ( 
-                <div key={name.id}>
-                    <NavLink to={`/${name.id}/sub`}>{name.name}</NavLink>
+            {this.state.nav.map(nav => ( 
+                <div key={nav.id}>
+                    <NavLink to={`/${nav.id}/category`}>{nav.name}</NavLink>
                 </div>
                 ))}
-            <Route path="/" render={props => <Nav {...props} navNames={this.state.navNames} />} />
+            <Route path="/" render={props => <Nav {...props} nav={this.state.nav} />} />
           </div>
         );
       }
