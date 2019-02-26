@@ -9,7 +9,7 @@ class App extends Component {
       <div>
         <NavWrapper />
       </div>
-    );
+    )
   }
 }
 

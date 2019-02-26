@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom';
+import {Route, NavLink} from 'react-router-dom';
 
 import Nav from './Nav'
 import Data from '../data'
@@ -8,7 +8,7 @@ class NavWrapper extends Component {
     constructor() {
         super();
         this.state = {
-          navNames: []
+          nav: []
         };
       }
     
@@ -19,7 +19,12 @@ class NavWrapper extends Component {
       render() {
         return (
           <div>
-            <Route path="/" render={props => <Nav {...props} Data={this.state.navNames} />} />
+            {this.state.nav.map(name => ( 
+                <div key={name.id}>
+                    <NavLink to={`/${name.id}/sub`}>{name.name}</NavLink>
+                </div>
+                ))}
+            <Route path="/" render={props => <Nav {...props} navNames={this.state.navNames} />} />
           </div>
         );
       }

@@ -109,8 +109,8 @@ const Data = [
     },
     {
       id: 3,
-      categoryName: "iPhone",
-      subcategories: [
+      name: "iPhone",
+      sub: [
         {
           id: 1,
           subImage:
@@ -163,8 +163,8 @@ const Data = [
     },
     {
       id: 4,
-      categoryName: "Watch",
-      subcategories: [
+      name: "Watch",
+      sub: [
         {
           id: 1,
           subImage:
@@ -217,8 +217,8 @@ const Data = [
     },
     {
       id: 5,
-      categoryName: "TV",
-      subcategories: [
+      name: "TV",
+      sub: [
         {
           id: 1,
           subImage:
@@ -253,8 +253,8 @@ const Data = [
     },
     {
       id: 6,
-      categoryName: "Music",
-      subcategories: [
+      name: "Music",
+      sub: [
         {
           id: 1,
           subImage:
