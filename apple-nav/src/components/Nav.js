@@ -9,7 +9,7 @@ function Nav(props) {
     return (
       <div>
           {choice.sub.map(x =>(
-            <div key={choice.id}>
+            <div key={x.id}>
               {/* <img src={x.subImage}/> */}
               <p>{x.subName}</p>
             </div>
