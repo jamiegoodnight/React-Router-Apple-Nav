@@ -21,10 +21,10 @@ class NavWrapper extends Component {
           <div>
             {this.state.nav.map(nav => ( 
                 <div key={nav.id}>
-                    <NavLink to={`/${nav.id}/category`}>{nav.name}</NavLink>
+                    <NavLink to={`/${nav.name}`}>{nav.name}</NavLink>
                 </div>
                 ))}
-            <Route path="/" render={props => <Nav {...props} nav={this.state.nav} />} />
+            <Route exact path="/:name" render={props => <Nav {...props} nav={this.state.nav} />} />
           </div>
         );
       }

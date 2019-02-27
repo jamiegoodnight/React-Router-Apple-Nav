@@ -1,14 +1,18 @@
 import React from 'react';
 
 function Nav(props) {
-    const subNav = props.nav.find(x => `${x.id}` === props.match.params.id);
-    if (!subNav) {
+    const choice = props.nav.find(x => `${x.name}` === props.match.params.name);
+    if (!choice) {
       return <h3>Loading items...</h3>;
     }
+    console.log(choice)
     return (
       <div>
-          {subNav.sub.map(sub =>(
-              <img src="sub.subImage"/>
+          {choice.sub.map(x =>(
+            <div key={choice.id}>
+              {/* <img src={x.subImage}/> */}
+              <p>{x.subName}</p>
+            </div>
           ))}
       </div>
     );
